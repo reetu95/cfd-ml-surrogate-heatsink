@@ -1,8 +1,8 @@
 # CFD-ML Surrogate for Heat Sink Thermal Prediction
 
-> **Neural network surrogate model that replaces a 15-minute CFD simulation with a 40-millisecond inference — a 22,000× speedup for heat sink thermal design.**
+> **Neural network surrogate model that replaces a 15-minute CFD simulation with a 40-millisecond inference,a 22,000× speedup for heat sink thermal design.**
 
-Companion code for:
+Paper:
 **"Machine Learning Applied for Instant Predictions of Spatial Temperature Variations in Heat Sinks for Computer Chip Cooling"**
 A. Jha, R. Thimmaiah, I. Perez-Raya — Rochester Institute of Technology
 *Accepted to the ASME 2026 Fluids Engineering Division Summer Meeting (FEDSM2026-184041), Bellevue, WA, July 2026.*
@@ -11,7 +11,7 @@ A. Jha, R. Thimmaiah, I. Perez-Raya — Rochester Institute of Technology
 
 ## Why this matters
 
-Thermal design of electronic cooling systems is bottlenecked by CFD. A single OpenFOAM simulation of a pin-fin heat sink takes ~15 minutes on an 8-core CPU, and exploring even a modest design space of 1,000 geometries takes ~250 CPU-hours. This work trains a PyTorch neural network on just 25 CFD simulations and uses it as a **surrogate model** — the same class of methods that underpin NVIDIA Modulus, PhysicsNeMo, and industrial design-space exploration tools.
+Thermal design of electronic cooling systems is bottlenecked by CFD. A single OpenFOAM simulation of a pin-fin heat sink takes ~15 minutes on an 8-core CPU, and exploring even a modest design space of 1,000 geometries takes ~250 CPU-hours. This work trains a PyTorch neural network on just 25 CFD simulations.
 
 Once trained, the surrogate predicts the full 3D temperature field T(x, y, z) for any fin geometry in the training range in **40 ms**, enabling real-time design iteration and gradient-based optimization that is infeasible with direct CFD.
 
