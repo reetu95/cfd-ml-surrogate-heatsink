@@ -9,6 +9,10 @@ A. Jha, R. Thimmaiah, I. Perez-Raya — Rochester Institute of Technology
 
 ---
 
+![Temperature Comparison](Screenshot%202026-04-24%20at%202.32.37%20PM.png)
+
+*ML-predicted temperature field (right) vs CFD ground truth (left) at L = 30 mm. MAE: 0.034 K, RMSE: 0.043 K.*
+
 ## Why this matters
 
 Thermal design of electronic cooling systems is bottlenecked by CFD. A single OpenFOAM simulation of a pin-fin heat sink takes ~15 minutes on an 8-core CPU, and exploring even a modest design space of 1,000 geometries takes ~250 CPU-hours. This work trains a PyTorch neural network on just 25 CFD simulations.
